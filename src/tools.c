@@ -6,7 +6,7 @@
 /*   By: vkaron <vkaron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/21 15:14:53 by vkaron            #+#    #+#             */
-/*   Updated: 2019/11/23 18:29:49 by vkaron           ###   ########.fr       */
+/*   Updated: 2019/11/30 19:21:23 by vkaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,14 @@ void	ret(t_lst *lst)
 int		close_free(int fd, char **line, char **word, int ret)
 {
 	free_word_line(line, word);
+	free(line);
+	line = NULL;
+	close(fd);
+	return (ret);
+}
+
+int		close_dir(int fd, char **line, int ret)
+{
 	free(line);
 	line = NULL;
 	close(fd);

@@ -6,7 +6,7 @@
 /*   By: vkaron <vkaron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/15 14:24:16 by vabraham          #+#    #+#             */
-/*   Updated: 2019/11/23 18:31:21 by vkaron           ###   ########.fr       */
+/*   Updated: 2019/11/30 18:47:20 by vkaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -178,6 +178,7 @@ void				free_l(t_lst *lst);
 int					free_word_line(char **line, char **word);
 int					close_free(int fd, char **line, char **word, int ret);
 int					free_words(char **words, int res);
+int					close_dir(int fd, char **line, int ret);
 
 int					key_press(int key, void *l);
 int					close_window(void *lst);

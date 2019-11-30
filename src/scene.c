@@ -6,7 +6,7 @@
 /*   By: vkaron <vkaron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/21 00:01:56 by vkaron            #+#    #+#             */
-/*   Updated: 2019/11/23 18:29:37 by vkaron           ###   ########.fr       */
+/*   Updated: 2019/11/30 19:00:34 by vkaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,6 +102,6 @@ int		read_scene(t_lst *l, char *file)
 		free_word_line(line, word);
 	}
 	if (ch < 0)
-		return (close_free(fd, line, word, 0));
+		return (close_dir(fd, line, 0));
 	return (close_free(fd, line, NULL, 1));
 }

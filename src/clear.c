@@ -6,7 +6,7 @@
 /*   By: vkaron <vkaron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/21 15:16:15 by vkaron            #+#    #+#             */
-/*   Updated: 2019/11/23 18:14:20 by vkaron           ###   ########.fr       */
+/*   Updated: 2019/11/30 18:57:00 by vkaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,11 +85,14 @@ int		free_word_line(char **line, char **word)
 	i = 0;
 	if (word)
 	{
-		while (word[i])
+		if (word[i])
 		{
-			free(word[i]);
-			word[i] = NULL;
-			++i;
+			while (word[i])
+			{
+				free(word[i]);
+				word[i] = NULL;
+				++i;
+			}
 		}
 		free(word);
 		word = NULL;
